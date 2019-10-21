@@ -1,4 +1,65 @@
-請用至少4顆LED，運用if、for、陣列、函數等內容(不需全部運用)
-製作跑馬燈、雨滴燈或霹靂燈等效果(至少完成一種)
+const int numLeds = 4;
 
-完成期限：108年10月12日
+int ledPins[4] = {8, 9, 10, 11};
+
+void setup()
+
+{
+
+    for (int i = 0; i < numLeds; i++) {
+        pinMode(ledPins[i], OUTPUT);
+
+    }
+
+}
+
+
+
+void loop()
+
+{
+    for(int i = 0; i < 4; i++) {
+
+        digitalWrite(ledPins[i], HIGH);
+
+        delay(100);
+
+    }    
+
+      for (int i = 0; i < numLeds; i++) {
+
+        digitalWrite(ledPins[i], LOW);
+
+        delay(100);
+
+    }    
+
+
+ for(int i = 0; i < numLeds; i++) {
+        digitalWrite(ledPins[i], HIGH);
+
+        delay(100);  
+        digitalWrite(ledPins[i], LOW);
+
+        delay(100);  
+    }    
+
+
+
+     for(int i = 3; i < 4; i--) {
+
+        digitalWrite(ledPins[i], HIGH);
+
+        delay(100);
+
+    }    
+    
+ for(int i = 3; i < 4; i--) {
+
+        digitalWrite(ledPins[i], LOW);
+
+        delay(100);
+
+    }    
+
+}
