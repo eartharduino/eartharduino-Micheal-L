@@ -36,7 +36,7 @@ void loop()
   lcd.print(x);               //LCD顯示x的內容
   delay (1000);
   x=x-1;
-  if (x=0)
+  if (x==0)
   { 
     delay(100);
     lcd.setCursor(0,1);
